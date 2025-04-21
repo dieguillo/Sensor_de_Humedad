@@ -1,0 +1,44 @@
+https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello
+
+<!DOCTYPE html>
+<html><head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>TITULO</title>
+<style>
+body { font-family: 'Courier New', monospace; text-align: center; background-color: #282c34; color: #abb2bf; margin: 0; padding: 10px; }
+h2 { color: #61dafb; margin-bottom: 15px; }
+h5 { text-align: left; margin-bottom: 3px; }
+div { text-align: center; }
+form { max-width: 200px; margin: 0 auto; padding: 10px; border-radius: 10px;}
+input { width: 90%; padding: 5px; margin: 5px 0; border: none; border-radius: 5px; }
+button { background: #4CAF50; color: white; padding: 10px 15px; margin: 10px; border: none; border-radius: 5px; }
+.data { margin: 10px auto; padding: 5px; background: #21252b; border-radius: 5px; width: 80%; max-width: 250px; }
+</style></head>
+
+<body>  <!-- /handleRoot -->
+<h2>Monitor Clima</h2>
+<div class='data'>Temperatura: 22.2 &deg;C 🌡️</div>
+<div class='data'>Humedad: 22.2 % 💧</div>
+<div class='data'>VPD: 2.2 kPa 🌱</div>
+</body></html>
+
+<body>  <!-- /handleConfig -->
+<h3>Configurar Monitor Clima</h3>
+<form action='/save' method='post'>
+<h5>Título:</h5>
+<input type='text' name='title' placeholder='Título Personalizado' maxlength='16' value='título'><br>
+<h5>Nombre WiFi:</h5>
+<input type='text' name='ssid' placeholder='SSID de la red WiFi' maxlength='32' value='SSID' required><br>
+<h5>Password:</h5>
+<input type='text' name='passwd' placeholder='Contraseña' maxlength='32' value='Password'><br>
+<button type='submit'>Guardar</button>
+</form></body></html>
+
+<body>"  <!-- /handleSave -->
+<h2>Configuración guardada!</h2>";
+<p>El dispositivo se reiniciará e intentará conectar a la red.</p>";
+<br>";
+<p>Puede cerrar esta página.</p>";
+</body></html>";
+
