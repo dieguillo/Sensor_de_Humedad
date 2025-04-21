@@ -1,7 +1,7 @@
-# Manual del Usuario: Estación Meteorológica con ESP8266
+# Estación Meteorológica con ESP8266
 
 ## Descripción General
-Este programa convierte un módulo ESP8266 (como NodeMCU) en una estación meteorológica inteligente con capacidad de:
+Este programa convierte un módulo ESP8266 en una estación meteorológica con capacidad de:
 - Medir temperatura, humedad, punto de rocío y déficit de presión de vapor (VPD)
 - Mostrar datos en una pantalla OLED
 - Proporcionar acceso web local a los datos
@@ -28,10 +28,10 @@ Este programa convierte un módulo ESP8266 (como NodeMCU) en una estación meteo
    - Reset de configuración mediante botón físico
 
 ## Componentes Requeridos
-- Módulo ESP8266 (NodeMCU recomendado)
-- Sensor AHT10 (temperatura y humedad)
+- Módulo ESP8266
+- Sensor AHT10
 - Pantalla OLED SH1106 (128x64, I2C)
-- Botón para reset (opcional, puede usarse el botón FLASH)
+- Botón para reset (default botón FLASH)
 
 ## Configuración Inicial
 
@@ -149,22 +149,6 @@ struct S_AhtData {
 | `/hotspot-detect`  | Captive Portal (Apple)              | HTML     |
 | `/ncsi.txt`        | Captive Portal (Windows)            | Texto    |
 
-## Solución de Problemas
-
-### Problemas Comunes
-1. **No se conecta a WiFi**:
-   - Verifique credenciales
-   - Asegúrese que la red está en rango
-   - Reinicie el dispositivo
-
-2. **Sensor no detectado**:
-   - Verifique conexiones I2C
-   - Asegúrese de alimentación adecuada
-   - Reinicie el dispositivo
-
-3. **Pantalla no muestra datos**:
-   - Verifique conexión OLED
-   - Asegúrese que el sensor está funcionando
 
 ### Mensajes de Error Serial
 - `Error inicializando AHT10`: Problema con el sensor de temperatura/humedad
@@ -174,11 +158,11 @@ struct S_AhtData {
 ## Consideraciones de Seguridad
 - La contraseña WiFi se almacena en EEPROM (no en texto claro)
 - Acceso OTA protegido con misma contraseña que WiFi
-- Se recomienda cambiar credenciales predeterminadas
 
 ## Licencia y Uso
 Este software puede ser modificado y distribuido libremente. Se recomienda su uso para proyectos personales, educativos y agrícolas.
 
 --- 
 
-Este manual cubre todas las funcionalidades principales del sistema. Para personalizaciones avanzadas o integraciones, consulte el código fuente comentado.
+Este manual cubre todas las funcionalidades principales del sistema.
+Para personalizaciones avanzadas o integraciones, consulte el código fuente comentado.
