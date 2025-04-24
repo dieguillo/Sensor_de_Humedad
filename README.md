@@ -7,11 +7,12 @@ Este programa convierte un módulo ESP8266 en una estación meteorológica con c
 - Proporcionar acceso web local a los datos
 - Configuración mediante portal cautivo
 - Actualizaciones inalámbricas (OTA)
+- Uso de EEPROM para guardar configuración
 
 ## Características Principales
 1. **Sensores integrados**:
    - Sensor AHT10 para medición de temperatura y humedad
-   - Cálculos avanzados de punto de rocío y VPD
+   - Cálculo de Punto de Rocío y VPD
 
 2. **Interfaz de usuario**:
    - Pantalla OLED SH1106 de 128x64 píxeles
@@ -153,14 +154,17 @@ struct S_AhtData {
 ### Mensajes de Error Serial
 - `Error inicializando AHT10`: Problema con el sensor de temperatura/humedad
 - `Error inicializando display OLED`: Problema con la pantalla
-- `EEPROM: SSID vacío`: Configuración no encontrada, iniciando modo AP
+- `EEPROM: SSID vacío`: Configuración no encontrada, inicia modo AP
 
 ## Consideraciones de Seguridad
-- La contraseña WiFi se almacena en EEPROM (no en texto claro)
+- La contraseña WiFi se almacena en EEPROM
 - Acceso OTA protegido con misma contraseña que WiFi
 
 ## Licencia y Uso
 Este software puede ser modificado y distribuido libremente. Se recomienda su uso para proyectos personales, educativos y agrícolas.
+
+## Links de interés
+- [¿Qué es VPD (Déficit de Presión de Vapor)?](https://drygair.com/es/blog-es/vpd-vapor-pressure-deficit/)
 
 --- 
 
